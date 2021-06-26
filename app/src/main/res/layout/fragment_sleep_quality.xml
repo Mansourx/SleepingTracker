@@ -56,9 +56,9 @@
             android:layout_marginStart="@dimen/margin"
             android:layout_marginTop="@dimen/margin"
             android:contentDescription="@string/quality_0"
+            android:onClick="@{() -> sleepQualityViewModel.onSetSleepQuality(0)}"
             app:layout_constraintEnd_toStartOf="@+id/quality_one_image"
             app:layout_constraintStart_toStartOf="parent"
-            android:onClick="@{() -> sleepQualityViewModel.onSetSleepQuality(0)}"
             app:layout_constraintTop_toBottomOf="@+id/title_text"
             app:srcCompat="@drawable/ic_sleep_0" />
 
@@ -67,9 +67,9 @@
             android:layout_width="@dimen/icon_size"
             android:layout_height="@dimen/icon_size"
             android:contentDescription="@string/quality_1"
+            android:onClick="@{() -> sleepQualityViewModel.onSetSleepQuality(1)}"
             app:layout_constraintBottom_toBottomOf="@+id/quality_zero_image"
             app:layout_constraintEnd_toStartOf="@+id/quality_two_image"
-            android:onClick="@{() -> sleepQualityViewModel.onSetSleepQuality(1)}"
             app:layout_constraintStart_toEndOf="@+id/quality_zero_image"
             app:srcCompat="@drawable/ic_sleep_1" />
 
@@ -79,9 +79,9 @@
             android:layout_height="@dimen/icon_size"
             android:layout_marginEnd="@dimen/margin"
             android:contentDescription="@string/quality_2"
+            android:onClick="@{() -> sleepQualityViewModel.onSetSleepQuality(2)}"
             app:layout_constraintBottom_toBottomOf="@+id/quality_one_image"
             app:layout_constraintEnd_toEndOf="parent"
-            android:onClick="@{() -> sleepQualityViewModel.onSetSleepQuality(2)}"
             app:layout_constraintStart_toEndOf="@+id/quality_one_image"
             app:srcCompat="@drawable/ic_sleep_2" />
 
@@ -93,10 +93,10 @@
             android:layout_marginTop="@dimen/margin"
             android:layout_marginBottom="@dimen/margin"
             android:contentDescription="@string/quality_3"
+            android:onClick="@{() -> sleepQualityViewModel.onSetSleepQuality(3)}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/quality_four_image"
             app:layout_constraintStart_toStartOf="parent"
-            android:onClick="@{() -> sleepQualityViewModel.onSetSleepQuality(3)}"
             app:layout_constraintTop_toBottomOf="@+id/quality_zero_image"
             app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/ic_sleep_3" />
@@ -106,11 +106,11 @@
             android:layout_width="@dimen/icon_size"
             android:layout_height="@dimen/icon_size"
             android:contentDescription="@string/quality_4"
+            android:onClick="@{() -> sleepQualityViewModel.onSetSleepQuality(4)}"
             app:layout_constraintBottom_toBottomOf="@+id/quality_three_image"
             app:layout_constraintEnd_toStartOf="@+id/quality_five_image"
             app:layout_constraintStart_toEndOf="@+id/quality_three_image"
             app:layout_constraintTop_toTopOf="@+id/quality_three_image"
-            android:onClick="@{() -> sleepQualityViewModel.onSetSleepQuality(4)}"
             app:srcCompat="@drawable/ic_sleep_4" />
 
         <ImageView
@@ -119,12 +119,48 @@
             android:layout_height="@dimen/icon_size"
             android:layout_marginEnd="@dimen/margin"
             android:contentDescription="@string/quality_5"
+            android:onClick="@{() -> sleepQualityViewModel.onSetSleepQuality(5)}"
             app:layout_constraintBottom_toBottomOf="@+id/quality_four_image"
             app:layout_constraintEnd_toEndOf="parent"
-            android:onClick="@{() -> sleepQualityViewModel.onSetSleepQuality(5)}"
             app:layout_constraintStart_toEndOf="@+id/quality_four_image"
             app:layout_constraintTop_toTopOf="@+id/quality_four_image"
             app:srcCompat="@drawable/ic_sleep_5" />
+
+
+        <HorizontalScrollView
+            android:id="@+id/scrollable_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/quality_four_image">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Helolllll may friend"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Helolllll may friend"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Helolllll may friend"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Helolllll may friend"/>
+
+
+            </LinearLayout>
+        </HorizontalScrollView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
